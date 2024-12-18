@@ -48,12 +48,10 @@ const Authorization = () => {
   }, [navigate]);
 
   return (
-    <body>
       <div>
         <h1>Authorization...</h1>
         {/* Остальная часть вашего компонента */}
       </div>
-    </body>
   );
 };
 
