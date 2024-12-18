@@ -41,7 +41,7 @@ public class AuthController {
 
         httpSessionBean.setChatId(Long.valueOf(chatId));
 
-        Cookie cookie = new Cookie("sessionId", Long.toString(chatId));
+        Cookie cookie = new Cookie("sessionId", chatId);
         cookie.setHttpOnly(true);
         cookie.setSecure(true);
         cookie.setPath("/");
