@@ -31,7 +31,7 @@ public class Person {
     @JsonManagedReference
     private ImageOfPerson image;
 
-    @OneToOne(mappedBy = "person", cascade = CascadeType.All)
+    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL)
     @JsonManagedReference
     private Executor executor;
 
