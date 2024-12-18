@@ -13,6 +13,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @Service
 public class FilesService {
@@ -21,7 +24,7 @@ public class FilesService {
     private final ImageOfPersonRepository imageOfPersonRepository;
     private final PersonRepository personRepository;
 
-    private final String UPLOAD_DIR = "C:\\Users\\User\\Desktop\\files\\image_of_person\\";
+    private final String UPLOAD_DIR = "/app/media/images_of_person/";
 
     @Autowired
     public FilesService(WorkRepository workRepository,
@@ -30,6 +33,19 @@ public class FilesService {
         this.workRepository = workRepository;
         this.imageOfPersonRepository = imageOfPersonRepository;
         this.personRepository = personRepository;
+
+        createUploadDirectory();
+    }
+
+    private void createUploadDirectory() {
+        Path path = Paths.get(UPLOAD_DIR);
+        if (!Files.exists(path)) {
+            try {
+                Files.createDirectories(path);
+            } catch (IOException e) {
+                throw new RuntimeException("Failed to create upload directory", e);
+            }
+        }
     }
 
     public void saveWork(MultipartFile file, Integer workId) throws FileSaveException {
