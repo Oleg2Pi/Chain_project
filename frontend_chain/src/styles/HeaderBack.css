@@ -1,0 +1,9 @@
+.arrow-exit {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+  }
+  .arrow-back {
+    font-size: 32px;
+    margin-left: 25px;
+  }

@@ -1,0 +1,144 @@
+.myprofile-page-container {
+  .box {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .profile-picture-container {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    margin-left: 20px;
+    overflow: hidden;
+  }
+
+  .profile-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .setting-image {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .setting-image:hover {
+    transform: scale(1.2);
+  }
+
+  .name {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .second-row {
+    display: flex;
+    align-items: center;
+  }
+  .profession {
+    font-size: 18px;
+  }
+  .status {
+    margin-left: 2px;
+    border: 2px solid black;
+    padding: 2px 10px;
+    border-radius: 20px;
+  }
+
+  .relative-box {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 20px;
+    background: radial-gradient(
+      74.19% 74.07% at 50% 50%,
+      rgba(39, 158, 255, 0.67) 0%,
+      rgba(210, 210, 210, 0) 100%
+    );
+    border-radius: 20px;
+    height: 100px;
+    position: relative;
+    display: flex; /* Использование Flexbox */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resume-block {
+    position: relative; /* Относительное позиционирование */
+    display: flex; /* Использование Flexbox для размещения содержимого */
+    flex-direction: column; /* Вертикальное размещение элементов */
+    align-items: center; /* Центрирование по горизонтали */
+  }
+
+  .resume-block img {
+    width: 200px; /* Фиксированная ширина для изображения */
+    height: 50px; /* Фиксированная высота для изображения */
+  }
+
+  .absolute-block {
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    color: white;
+    position: absolute; /* Абсолютное позиционирование текста */
+    bottom: 10px; /* Положение текста от нижней части родителя */
+    left: 50%; /* Центрирование текста по горизонтали */
+    transform: translateX(-50%); /* Центрирование текста */
+    text-align: center; /* Центрирование текста */
+  }
+
+  .button-box {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .subscribe-button,
+  .write-button {
+    background-color: #1739d9;
+    color: white;
+    width: 130px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.15s;
+  }
+  .subscribe-button:active,
+  .write-button:active,
+  .more-button:active {
+    opacity: 0.9;
+    background-color: #173ff1;
+  }
+
+  .portfolio {
+    display: flex; /* Устанавливаем flex-контейнер */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    align-items: center; /* Центрируем элементы по вертикали */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    padding-left: 25px;
+  }
+
+  .portfolio p {
+    font-family: RF Dewi Expanded;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 50px;
+    letter-spacing: -0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}

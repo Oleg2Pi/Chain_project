@@ -1,0 +1,35 @@
+.myprofile-page-container {
+  .small-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 30px); /* Учтите отступы */
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  .small-buttons button {
+    box-sizing: border-box; /* Учитывайте отступы и границы в ширине */
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  #back1 {
+    background-image: url("../../assets/elements/resume.png");
+    background-size: cover;
+    height: 140px;
+    width: 44%;
+    background-repeat: no-repeat;
+  }
+
+  #back2 {
+    background-image: url("../../assets/elements/podpiska.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 53%;
+  }
+}

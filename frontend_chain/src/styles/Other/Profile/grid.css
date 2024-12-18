@@ -1,0 +1,86 @@
+.profile-page-container {
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8px;
+    row-gap: 10px;
+
+    margin-top: px;
+  }
+
+  .video-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-preview a {
+    text-decoration: none;
+    color: inherit;
+  }
+  /*It's place for video*/
+  .image {
+    height: 230px;
+    width: 155px;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 12px;
+  }
+  .video-info {
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .support-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+  }
+  .edit-button,
+  .remove-button {
+    font-size: 10px;
+    width: auto;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.15s;
+    padding: 5px 20px;
+  }
+  .edit-button:active {
+    background-color: rgb(91, 161, 91);
+    color: white;
+  }
+  .remove-button:active {
+    opacity: 0.8;
+  }
+  .edit-button {
+    background-color: white;
+  }
+  .remove-button {
+    background-color: rgb(224, 67, 67);
+    color: white;
+  }
+
+  .more-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .more-button {
+    margin-top: 15px;
+    background-color: #1739d9;
+    color: white;
+    width: 60vw;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+}

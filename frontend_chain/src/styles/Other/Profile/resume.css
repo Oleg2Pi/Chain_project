@@ -1,0 +1,90 @@
+.profile-page-container {
+  .box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-picture {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+  .name {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .second-row {
+    display: flex;
+    align-items: center;
+  }
+  .profession {
+    font-size: 18px;
+  }
+  .status {
+    margin-left: 2px;
+    border: 2px solid black;
+    padding: 2px 10px;
+    border-radius: 20px;
+  }
+
+  .relative-box {
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    background: linear-gradient(#9ee65c, #61b0f0ab);
+    border-radius: 20px;
+    height: 100px;
+    position: relative;
+  }
+  .absolute-block {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+  }
+  .resume-block {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+  }
+
+  .button-box {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .subscribe-button,
+  .write-button {
+    background-color: #1739d9;
+    color: white;
+    width: 130px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.15s;
+  }
+  .subscribe-button:active,
+  .write-button:active,
+  .more-button:active {
+    opacity: 0.9;
+    background-color: #173ff1;
+  }
+
+  .portfolio {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    font-size: 24px;
+  }
+}

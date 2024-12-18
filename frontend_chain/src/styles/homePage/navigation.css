@@ -1,0 +1,114 @@
+.main {
+  .destination {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    height: 45px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .destination a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: black;
+    padding: 5px 8px;
+    transition: 0.15s;
+  }
+  .destination a:active {
+    background-color: #d9d9d9;
+    border-radius: 12px;
+  }
+  .label {
+    font-size: 11px;
+  }
+  .icon {
+    width: 15px;
+    height: 15px;
+  }
+  .fa-plus {
+    font-size: 30px;
+    color: #1739d9;
+  }
+
+  .footer {
+    position: relative;
+  }
+
+  .plus-icon {
+    cursor: pointer;
+    transition: transform 0.5s ease;
+  }
+
+  .plus-icon.open {
+    transform: rotate(135deg);
+  }
+
+  .main-buttons-container {
+    display: none;
+    width: 80%;
+    align-items: center;
+    flex-direction: column;
+    position: fixed; /* По желанию, можно использовать fixed */
+    bottom: 40px; /* Расстояние от футера */
+    left: 50%;
+    transform: translateX(-50%) translateY(-30%);
+    z-index: 4;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .main-buttons-container.show {
+    display: flex;
+    opacity: 1; /* При открытии кнопок устанавливаем непрозрачность 1 */
+    transform: translateX(-50%) translateY(-30px); /* Двигаем кнопки вверх */
+  }
+
+  .main-button {
+    background: none; /* Убираем фон */
+    border: none; /* Убираем рамку */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем внешние отступы */
+    font: inherit; /* Устанавливаем шрифт родителя */
+    color: inherit; /* Устанавливаем цвет текста родителя */
+    cursor: pointer; /* Устанавливаем курсор как указатель */
+  }
+
+  .main-button {
+    background-color: white;
+    color: #1739d9;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 5px 0;
+    font-size: 22px;
+    font-family: RF Dewi Expanded;
+    font-weight: 545;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
+
+  .main-button:hover {
+    background-color: #0056b3;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Прозрачная серовато-черная тень */
+    z-index: 3; /* Задаем z-index, чтобы он накладывался на остальной контент */
+  }
+}
