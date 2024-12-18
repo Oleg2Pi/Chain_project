@@ -1,0 +1,62 @@
+networks:
+  chain:
+
+services:
+  database:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: chain
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - chain
+
+  backend:
+    build:
+      context: ./Backend_chain
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/chain
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: admin
+    depends_on:
+      - database
+    networks:
+      - chain
+
+  frontend:
+    build:
+      context: ./frontend_chain
+    networks:
+      - chain
+
+
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - frontend
+    volumes:
+      - './nginx.conf:/etc/nginx/nginx.conf'
+    networks:
+      - chain
+
+  bot:
+    build:
+      context: ./Rewrite_bot
+    environment:
+      - BOT_TOKEN=7598478971:AAHoHXymfbVhER7jFvTkfAGFboggg196Hy8
+    restart: always
+    networks:
+      - chain
+
+
+volumes:
+  postgres_data:
