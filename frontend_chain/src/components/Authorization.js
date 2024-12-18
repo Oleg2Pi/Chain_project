@@ -28,9 +28,9 @@ const Authorization = () => {
 
           if (success.ok) {
             console.log("Login success");
-            // setTimeout(() => {
-            //   navigate('/');
-            // }, 1000);
+            setTimeout(() => {
+              navigate('/');
+            }, 1000);
           } else {
             const errorMessage = await success.text(); // Получаем текст ошибки
             throw new Error(`Login failed: ${success.status} ${errorMessage} id: ${user.id}`);
