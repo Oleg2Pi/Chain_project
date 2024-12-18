@@ -15,7 +15,7 @@ const Authorization = () => {
 
       const authorizeUser = async () => {
         try {
-          const success = await fetch("http://backend:8080/api/login", {
+          const success = await fetch("https://3527-176-108-248-218.ngrok-free.app/api/login", {
             method: "POST",
             credentials: "include",
             headers: {
