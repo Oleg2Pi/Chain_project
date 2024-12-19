@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Создаем экземпляр axios с базовым URL
 const api = axios.create({
-    baseURL: 'https://3527-176-108-248-218.ngrok-free.app/api/',
+    baseURL: 'https://2e95-176-108-248-218.ngrok-free.app/api/',
 });
 
 // Функция для обработки ошибок
@@ -59,6 +59,6 @@ export const fetchWorksExecutor = async (id) => {
     }
 }
 
-export const ApiGetFile = `https://3527-176-108-248-218.ngrok-free.app/api/files/`;
+export const ApiGetFile = `https://2e95-176-108-248-218.ngrok-free.app/api/files/`;
 
 export default api;

@@ -15,7 +15,7 @@ const Authorization = () => {
 
       const authorizeUser = async () => {
         try {
-          const success = await fetch("https://3527-176-108-248-218.ngrok-free.app/api/login", {
+          const success = await fetch("https://2e95-176-108-248-218.ngrok-free.app/api/login", {
             method: "POST",
             credentials: "include",
             headers: {

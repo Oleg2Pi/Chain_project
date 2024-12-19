@@ -11,7 +11,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const getUsers = async () => {
-      const myId = await fetch("https://3527-176-108-248-218.ngrok-free.app/api/profile", {
+      const myId = await fetch("https://2e95-176-108-248-218.ngrok-free.app/api/profile", {
         method: "GET",
         credentials: "include",
       });
