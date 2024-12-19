@@ -43,7 +43,7 @@ public class AuthController {
     }
 
     @GetMapping("profile")
-    public ResponseEntity<Long> getChatId() {
+    public ResponseEntity<?> getChatId() {
         Long chatId = httpSessionBean.getChatId();
 
         if (chatId == null) {
