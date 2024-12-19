@@ -47,8 +47,7 @@ public class AuthController {
         Long chatId = httpSessionBean.getChatId();
 
         if (chatId == null) {
-            String errorMessage = "Chat ID not found. Ensure you are logged in.";
-            return ResponseEntity.status(404).body(errorMessage);
+            return ResponseEntity.status(404).body("Chat ID not found. Ensure you are logged in.");
         }
 
         try {
