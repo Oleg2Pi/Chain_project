@@ -4,8 +4,6 @@ import by.polikarpov.backend.bean.HttpSessionBean;
 import by.polikarpov.backend.entity.Person;
 import by.polikarpov.backend.service.PersonService;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +24,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Void> login(@RequestBody Map<String, String> payload, HttpServletResponse response) {
+    public ResponseEntity<Void> login(@RequestBody Map<String, String> payload) {
         String chatId = payload.get("chatId");
 
         if (chatId.isEmpty()) {
@@ -40,12 +38,6 @@ public class AuthController {
         }
 
         httpSessionBean.setChatId(Long.valueOf(chatId));
-
-        Cookie cookie = new Cookie("sessionId", chatId);
-        cookie.setHttpOnly(true);
-        cookie.setSecure(true);
-        cookie.setPath("/");
-        response.addCookie(cookie);
 
         return ResponseEntity.ok().build();
     }

@@ -16,7 +16,7 @@ const Footer = () => {
 
   useEffect(() => {
     const getPerson = async () => {
-      const myId = await fetch("https://3527-176-108-248-218.ngrok-free.app/profile",
+      const myId = await fetch("https://3527-176-108-248-218.ngrok-free.app/api/profile",
         {
           method: "GET"
         }
